@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+    <h1 id="test">Affichage des questions</h1>
+    <br><br>
+    <p>{% for question in questions %}</p>
+        <li>{{ question.content }}</li>
+    {% endfor %}
+    {{ dump(questions) }}
+    </body>
+</html>

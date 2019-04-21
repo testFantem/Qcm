@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1 id="test">Affichage des questions</h1>
+        <br><br>
+        <form id="formCreateQcm" action="{{ path('CreateQcm') }}" method="post">
+            <p>{% for question in questions %}</p>
+                <input type="checkbox" name="idQuestion[]" value="{{ question.id }}"> {{ question.content }}
+            {% endfor %}
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
